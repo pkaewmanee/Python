@@ -1,0 +1,143 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Data Visualization
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Data Visualization</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>Top 10 Anime Recommendation</ion-card-title>
+      </ion-item>
+      <ion-card-title>{{showTitleValue}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <img  width = 400 src='https://lh3.googleusercontent.com/nazgvM5kCXIqHeITKA6-N3FPzx_kd1o0qGk2tdS_XREew6I1Lz3z9aSSfvllvKguBnNa2Uliber-n2AGBiB-Zri38FjO9xbDXfem-ihiG7BPnj4EXckQTEiiOH7E7qxbuzIurwECBLkjpGJkOtAglKuIux94Npb21cCyywVL8l1x8QDqoYY93XoUOtbcWpFgDU7023sKoPYK8aW3PBrQpYSDZKfC-8exA5wUTgP2OdwQOmp9-MnNkS-ULUJUXcjnufXVOdI3I-wcxjZUNhZtZ9VCYhlbNvBUVI5I4-UbpLP0q4awERZTnnFycgcp3P9ygsMliJPTOuY0rWT_K6805b5UtKq1B3aq5HAikL3Zu4f32zOoTGFX_cZWkS5emG5tK1VCFbt8ugsyxutvnhdO1hjIiRezkfY49dXXrKwuqlOQNo-ribvfp-FfGRNqEjqvBOk3a6KDAdcB06ya7q4dPDAlq2ZWW6M8omPF2IdeSrKDvej-2Q1dVDzQoqt2kbXSrJuarnS8mcU06e-Mf53bnomDDVkrVVYP9PfvHQvcSFpEYVht8IFGo8kZJQlhHfi0ii2MimyD-7jOuea7hYIMNguVVKrx9FhAyMDYb9wcC-9AtTIrUgY8oExtd8P054XmVtN_AspELiEsKEBYUOFyAzseFx7fEp1Qt25MFAepitkMl9bRMrhJxP49AybHacNzUnLcw8sBrlXmWwdghVgzHQ=w864-h576-no?authuser=0'>
+    </ion-card-content>
+    <ion-card-content> "According to the user who rated within this dataset. These ten animes are the top ten best rated anime.” </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>Defining Anime Success</ion-card-title>
+      </ion-item>
+      <ion-card-title>{{showTitleValue}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Card 1 -->
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle size="large">The Rating Distribuition Over Dataset</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+           <img  width = 400 src='https://lh3.googleusercontent.com/7p7wOI4Bv1nE_CtGh1YpaEGJ97lsarerwOZ8xJUuhkUBo1c5-7r6xmKuvQkeQThadpaGbmh0GSRC7YtCCUodIawmjRkY-TXK2CQY-b3fwrJHB2f4TWo_Oc6zc9iKQPvp9IQBq316ySxLaYnf4p2aK9Z-z3sEOupki3FP-vIn0PMMKdzb2sVGpUVcaAUfJIHBRusmpQdg0JtaPZ_DzkHIj9ROuGyr95bNGtUKg4uA73BVLfdUsqtPzMObzlGzQPIlPHrAA5IW_-48X67EIpYIrZht8G3YgYFtkOhTHgEcpTYf8EvpUueSgS1nBJ21ccZ7yzQ7ZUKJMYHXDdTW4EP92QI_m18BmUOw3a7EMlBkQFk09wkOUM8Zg-js66hoB1Ximhcck4PZIDnzWE4jqElcePE86ixZo4V989ASjjS7f65DjFvDxWsPeWTjwr0ty6Vk-PgbB5oqB3WGQ2l67dt2LYivtqj60lfNdzthp6IrRhqZnW-ulG9Mwu5m25NT13nqpfkM3-44wFooVGtZuYHZHKTEI2XJGmS8qT7R3k_mlHYeL2bLJzL_NvblaNYggUgs0NlFTQ6I_QTigmvsa_gyTbQSSBQA2LjHcXa2Vq4GuRT0Js6dZMoUbBg-MHK80ypDOTqipZELCoNZBUVFBbj2YKBs1zCzTsakMa3J9xCqCYVDhF4vsO_AMWQcdCaxJuXMl5crE-ns-R_co5Ww4jUbeXk=w864-h576-no?authuser=0'>
+        </ion-card-content>
+        <ion-card-content> "The rating distribuition over dataset is looklike normal distribuition, the most common rating is between 6 and 8.” </ion-card-content>
+      </ion-card>
+      <!-- Card 2 -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Boxplot Rating</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img  width = 400 src='https://lh3.googleusercontent.com/VdaCCyiqzSpdB84b5nsPYZGNOb0WEsctngDL8wymvGZwOAYghGR1cw3Mx0jCa6DuCmtu6BfH9WsW2Q_ze335GJqp55MrLLHaH1KeLbYD_q3DWqdFWpTWs90Gc2qjinu9S_PyqFwusXKF-ZEcKCTUdtR5cMjfIP7AzWTHWaCyULHIAe9hG3-RC8I7EHQy1cr55I41ivhGTiJYsNPWiErstmaaEDVdftureMHNNho6gfC9QUtRN0dTBMU7RIkR4rDzIMFhsLoASyFTc0D3K4KQF5drdvSV4Dh0QNvxssjHXRPx4AVtgz6DbT4BNbWeCd7_Rl_w9Synn_J1lcsWtZi-36czW2ThwpjR4goGBmXh0B-0HjEMnqmFfsGbv1_SCiEL24pJqR6jfRfoFZPcSimtdPY7VhosuXxBJXH2zhZT9LEJ0QX6CfDrYq2gJEXtgMbett1e7tc6TUpYb2lnmsG82NVyN1U8PVSQP5Gv8V8eKhh7aXbsoqRKyDjJh4lqYRi16oZs_zkvdaKAioRNxlA7Z5xFXNpnVvLKxRhcQR6gA67Fn-jXBYYV_HS6Sky13V1M8sMWH1xb8OenZn37OuW190ssKWjpiYp89QikXyY95eFshODMxj7LxiOhj8L2sbwk4r4egQSBYMYIZxOLnsOmZO0MyqjeR25LtrdE11oFpkQh32T1VMwgziDbtF0jE_PXms0EWpSQwzzLLkYd-AcjOQ=w864-h576-no?authuser=0'>
+        </ion-card-content>
+        <ion-card-content> "So box plot show us that not common the animes receive rating below 4 and above 8.7, this ratings can be interpreted as an anime the not very watched.” </ion-card-content>
+      </ion-card>
+      
+      <!-- Card 3 -->
+      <ion-card> 
+        <ion-card-header>
+          <ion-card-subtitle>The Episodes Distribuition Over Dataset</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+         <img  width = 400 src='https://lh3.googleusercontent.com/h0jSOOT4kZ6pENfKkvO0Yt6PgquAqrifkHRM9Iw219YWjr7ws_3yX-AFIUBSRZiyFNPW6h5UwnOUBmgtQdtyfmRU68uoZ_Zx1PWLsNg-7mEzl2vspWEDIQSZioAgPZ8OatLERxjiwfn0OJXr8uajl9AuRBcWOWEBbZwrgeyUqnad4-gqs1jqBmidR5GP54YtB9tmBaKABWCpIxE9gYpRpITtt5QqjGITlVdyDgy_rxb88u8YjMtyp68VH4GSZbnAOxyrmXpZYodtheo73NFuchmbJf-MyzuZWKovy9x3yM4YuN09V9XivKDDEC_IL42iTsImbTWTS3wCS0_KrvHjRJKzYrAUolJgnIA_cpAN6ms6Nu6Y8hj_cNylG-00G3BMqeb-hnV02Z94Lm0obZoWvsLxBdPQKWPO0QxkWtKA_WkJCwSj7TvRVuW_SmhzM8sXT9sICYHpY9CtA53d0pouKCBkzHqRFieQZYISEcEtuFltTAtbLsOVVmvKG5_HuutUiYZ7lWohcxUI9wCgbChfJMt0awUkWSu4X8viR5Rn6aLZnsgBwflf1E5l_ewAoBMBpQfptcEINNG70xec0yuKFagh_q_GahbjQ2OvV_hc9teGt1sfq10eZVhOFl7cpJ5_PLpxSjE_n-iF6yVt6w7QE_hoCsn0z5wzgb6Ptey0TwAGilTs-EwLylRBJ-TwiEMEEEXBSzKIoDq8R1iPLgCGaQ=w864-h576-no?authuser=0'>
+        </ion-card-content>
+        <ion-card-content> "Animes there are among 0 and 250 episodes, and exist a gap until 1500 and 1750 episodes.” </ion-card-content>
+      </ion-card>
+
+      <!-- Card 4 -->
+      <ion-card> 
+        <ion-card-header>
+          <ion-card-subtitle>Member VS Rating</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+         <img  width = 400 src='https://lh3.googleusercontent.com/GaOsfNkj3nNWbBUSULq4eWmtQtsxfUIjcxJxU7fE_iLzBkgpZp4hVDXEHv7Tx2ZE5Ddro4rYIJZIPBuV5aJ78LEOFdjpxjViV1-4FezxPO1q_hTn5fnIdPnx6ghMO-MzVkIHZBFU-ULMiMqKf_2SEZLJuWyBYlB2338gnV_1OR7NOxUFqcfzpt0aPCaMrBsxBT38AH2CFbzpFg2ThjkKVHwNsTZHdVTQD5aCmtk11raJwBAoKqV-ETypcg1BtBRbkeVakf_MczCijxGqYspFk6z3I3FpmUi7JJUSdUC3zYi--DJ1ia-cuhD3jmeqi7QnfGxoiCp0UmXGSS7Rh_EwlWwI0Rhksh_NfE58JKacbSBd0ptY-_mjXrURwJ8XpZuz5imkETasjLKNfPO6CwGkl3a-q1RVf55UWKtj2D-GADqHw1r4N3US88yZQ_8mHNsq_hUOOS-Ea7YK-YEu9hUjUra5cvAj-CkBJjwuZway-5A22m1ZFlFkcJ028ZDN7MJKS_4S4ygbIyrzMTtVk4cgWprW6reza806OVy5D2qcIDqBX-cmF6m9ezPuaxUXylsP9Z5v9zwXzflmmaF7dbavr-yblZ2KFuYZcej7hDE1w6Lodl3S3GF0FgAxFmKeINkM5CHAZ5W4xdc0mlDCoGagXSJKrHnj692otSr8pBolTFTRDuBLUCyTunHBYzOKB33BF5kJKMGmgrn6imuEkEPt18k=w864-h576-no?authuser=0'>
+        </ion-card-content>
+        <ion-card-content> "Members show how much peoples keep the anime in list, so how much people watch anime it tends to be more rated, animes with low number of members has in general low rated.” </ion-card-content>
+      </ion-card>
+      
+      <!-- Card 5 -->
+      <ion-card> 
+        <ion-card-header>
+          <ion-card-subtitle>Genre Barchart</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img  width = 400 src='https://lh3.googleusercontent.com/ZZOXe3xewIhkn-zm99-lFngwUrL3nxSCiNQ_9czLARKazt8nu8BrpzKoiZbZDbsX0O6pZfdo-OdnJD5aOodQ1XKnXqfvR8BEw7bqbaoD9Trs-41svFXiSV1SKfCnzV63ryfdSur5fznlqcuDeN7BTDtnlhHCxz2vlEsWvcTgskjkrlOTljAKPaBAomLa8oxPGi92ZyLa2zXpOYg3MTWNoRRiY1_ChA7gG5u_borT48Q8E-gRqZjHI5k5aMTgtc4ajbV-KXb3o7jtfU-ChMgVlwjv7qqM_OXgwIlibqKdFROp9bAcWGAeMdE_dhAZbKOQRA5ORVLmBZp4C5l1fNkxeLG9hkt3vuKy4eSw7rfWIxeBDmxq8jK5xv6yzTLn47Kav-0SfvfSUbQMzu1PrSGoQEo50w-zXyBuQOSOf5fw1WWY-6ETe787z5afOGaBlMuCKwKtu1VeHH3iNIEyGkNjEI8e7vqI4B5Z_bgrCLP1abzlAFcZu-NCb1AnO25tLcT57GSXdI1FadaBV5_GP9CkXd2wIsJga0bTADoNYz0AVcgRwIVbxbDWaA5Blh9U7mQixPIF6msUm_IOIB9prE_JaHfRYKy9eVnBXsvTvcgEg9SjuZ_oAesBpZXlQo8NiMwDTLeSKYHqAgJlWyiIh332j3RlT5G1Dtxh2pMPJeI6Ufrb3BCzdm0LlmTRCFvD-Xz2_IGfr5WVNlGzKrVP41CWijY=w864-h576-no?authuser=0'>
+        </ion-card-content>
+       <ion-card-content> "When look for genre that are great density of 1 until 7, after that the number of genre deacrese drastically.” </ion-card-content>
+     </ion-card>
+
+      <!-- Card 6 -->
+      <ion-card> 
+        <ion-card-header>
+          <ion-card-subtitle>Genre Boxplot</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img  width = 400 src='https://lh3.googleusercontent.com/n9XKWAY_5tCzq6fs2_XQPKQdDtXmEte6_xnnn6Hju2Lgc8eLWDXpur7Mjz7CaWSjgXIxf-PrD31QImSNSQbpa8EPnxJcyCg8HOljD1s5IKHUV8jeqfHp_Aa-lUT5R2HEhyM9GrloCoBkE2-Jm4nrahjOTY8OBAQYvoHeM2nPsnCFOaJXluTZh9r5xtuIs4inkeuJ0zHQvn2eUVWOPzZTE139PbjF-39yoi6GwxrXJjCjxPa8T8gHD4SYESfRnXIR9eM2UGuIWKafV0jFUk6BeaEBoc1pv-UwCkioSNoxVXAvHzPizhVieJe3ttQxaNnXFPTyG2iXH8TK3r6ZyDf1H_neaXv9M2swHTtMf_2xtXN8pMDuprFhKH-V95U2apCDqLlQo3t0gxnJWNbqzAHmyOp1XzdD62k2LgKVXuzaCsxaDxaeq9EqPj8bTpDXvF4Sj-vJW03tKl2LJpUYcaCLEZPvIzJSNcPNLxXy4wjtl21GzXB7LN5pe2soHWaYM4ihGMbVjIymyOTyrTT0nYVHfkbgOlmnOdAXQ6xZFLghrQH8SHXsveDdiIfwfqekxG5FmQzeuHxZQj9YZHb5REZYUsaNEXYGUW5ub3xggIyWqcaRNwQzrLLumXz_UozYJUfmfy4gV-pQiicYRFuRZXReed2zd4sk804Mt1IX2v_juHEeFKxcxz6xLMXTPbKOwyQzk27ZRuejAVw3I8rsU4By9Y8=w864-h576-no?authuser=0'>
+        </ion-card-content>
+       <ion-card-content> "Based on genre while the number of genres of the anime grows better it is classified.” </ion-card-content>
+     </ion-card>
+
+      <!-- Card 7 -->
+      <ion-card> 
+        <ion-card-header>
+          <ion-card-subtitle>Format Barchart</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img  width = 400 src='https://lh3.googleusercontent.com/PJkYPrfuVpo7EdqcLi5BS_ohHk28dEcMc9xrjDAK571g1Ronle2PIWuF5mEGa1ISr4VXJcUXv-lO5N5MGW90oz_IPt2YdSH37LabYK-W5YdUBoSPMQ7ozavZmvSB4Rj8roR7orcZEsw4F-KxGbhIi98KFrgqtKqi83aKWSZR9R1chhtixhXMABx_Hx8udGMw4oE3mzHTtnwYdWTstJ_aj5nMMX95iQrzf_egapJryGtZ4e3Au4F13v4C2EhvbgC4qSJZLhEhiaKSSj-uuXDYi2zJmFkui4TaymiDS0WvWWk2LcWb5pDirjB8_fBOA_xdmA7-65jKFogahVUu5xdHQZ0qoxMqQMKQvjgQChcPirG5AYtytk_5L1OEeH3287XzZGJKGwRsneWgpn113_UKo9JJ20jxe88itJuH2ilKuzfnxL77di5Y0SDtfeA1z0RL9H8wfO93Zk3UEt__7xseMhVGu_a3mXtH-9kXHidzbC126TGT-R8j97EHnK00boNsLnuk-eMfNPKxpHvnQQ7kGKxqwZNuqwuxRg6LNf7ygJ1hqWnsykLdBxLLUz8gn8x2EUA95qnd3b4hZkAecIX0AQ8OJ9WHXwu91HunAMfUW-Y2RqkyXOb7Hz0NC-TfVkVblQ9kz4Rrltg_j2X0DvkllvQ2jCDhBiKx2dlkq6CXToKGWTEuRjogXvSVQuMeQLaOok143Jy5bKFJxXNfidu0ZnQ=w864-h576-no?authuser=0'>
+        </ion-card-content>
+       <ion-card-content> "According to the user who rated within this dataset. These ten animes are the top ten best rated anime.” </ion-card-content>
+     </ion-card>
+     
+     <!-- Card 8 --> 
+     <ion-card>
+         <ion-card-header>
+          <ion-card-subtitle>Format Boxplot</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img  width = 400 src='https://lh3.googleusercontent.com/UP174Z0eF0ACNFTnywPvJUG1rV5N59cGiaIEU5l1Ogxgpcztw5RA8y8gmDWFjhyc4nrXZmGIRikDYgrvz8tgTR-JLX07Lr0xOL9s8wags93HH7sH28w0s9kz7SquVw4tS-9nEZ87s_p1h13KZRv1BUq61xBImnbtWNLqW5QOQfvaNM8-dFLahZ0K5yZ_78gZS2RnN1htBfDPpIKL_CaHA9ZY3pFFi3T1jqmuRJi1ZzRmRlwckgHEMVS3SDwTiZ1kW70E1o2E4eR56R3FEJCZwlsvna4Jd9n-tcvl4JlEo_gTWCTrBLvE1FpaA2CNb37czU09ARmbtzDWoxm9eeSy4KA5aa8-RgpYFiw3B5vfdruz3-9Cce-GcxDRuT4UvYgsCbANz_E29U2pmMFxoagWdLXsxPYJRGn6AqL1iVM3lQ4xx5OT9pJtFT4gpZXJaAoKzIjr-r8PQFWiFPWBU1QpYHnn9RLKwsFYyK7Yh2Rwm4He8nMHi692exdUNg7r90jpgsebQclRsLboIcuGPQTvtxKwAvJcKd7LLmlSnf8rqSfRtg_CeK07UPXKvOdB2EMR-fstQ2tooDV7PVdOAuQYeVt4N6poqIdfg5Fmci5ryehvpPnqDBPF9Hf8i8HEglGRh3TaBIiQFJgViEhqYdqr2D_X00_9QknujCoR4t6GTin03Ow-UNjiX2jW-a3_TIzlhDVkaz-ZRSuAuVy6Sr_tyGQ=w864-h576-no?authuser=0'>
+        </ion-card-content>
+        <ion-card-content> "According to the user who rated within this dataset. These ten animes are the top ten best rated anime.” </ion-card-content>
+      </ion-card>
+
+     <!-- Card 9 --> 
+     <ion-card>
+         <ion-card-header>
+          <ion-card-subtitle>Conclusion</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <img  width = 400 src='https://i.imgflip.com/4x2g28.png'>
+        </ion-card-content>
+        <ion-card-content> "Based only in metadata to for an anime to succeed, it need be run until 250 episodes. It also need to have up to 7 genres. The anime should be in either TV or movie format.” </ion-card-content>
+      </ion-card>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

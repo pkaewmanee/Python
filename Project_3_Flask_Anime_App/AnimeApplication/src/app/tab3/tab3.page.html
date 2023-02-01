@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Suggestion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Suggestion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card>
+      <ion-card-title>
+        <h1>Give Us A Review Of This App</h1>
+      </ion-card-title>
+    </ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>User</ion-label>
+        <ion-input [(ngModel)]="inputUser"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Rating</ion-label>
+        <ion-input [(ngModel)]="inputUserRating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Review</ion-label>
+        <ion-input [(ngModel)]="inputUserReview"></ion-input>
+      </ion-item>
+      <ion-button expand='full' (click)="insertReview()">Submit</ion-button>
+      <div *ngIf="review$ | async as dr">
+        <ion-card-content *ngFor = 'let r of dr.data'>
+          r
+        </ion-card-content>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card>
+      <ion-card-title>
+        <h1>Insert New Anime</h1>
+      </ion-card-title>
+    </ion-card>
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label>Anime Name</ion-label>
+        <ion-input [(ngModel)]="inputAnime"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Format</ion-label>
+        <ion-input [(ngModel)]="inputFormat"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Episodes</ion-label>
+        <ion-input [(ngModel)]="inputEpisodes"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Anime's Rating</ion-label>
+        <ion-input [(ngModel)]="inputAnimeRating"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Anime's Genre</ion-label>
+        <ion-input [(ngModel)]="inputAnimeGenre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Date Of Insertion</ion-label>
+        <ion-input [(ngModel)]="date"></ion-input>
+      </ion-item>
+
+      <ion-button expand='full' (click)="insertAnime()">Submit</ion-button>
+      <div *ngIf="anime$ | async as da">
+        <ion-card-content *ngFor = 'let a of da.data'>
+          a
+        </ion-card-content>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

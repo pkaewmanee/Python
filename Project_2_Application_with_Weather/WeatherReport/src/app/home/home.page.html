@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Weather Report
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Weather Report</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ionic-card>
+    <ionic-card-content>
+      <ionic-item>
+        <ion-label>District</ion-label>
+        <ion-input [(ngModel)]="district"></ion-input>
+      </ionic-item>
+    </ionic-card-content>
+  </ionic-card>
+
+  <ionic-card>
+    <ionic-card-content>
+      <ionic-item>
+        <ion-label>Subdistrict</ion-label>
+        <ion-input [(ngModel)]="subdistrict"></ion-input>
+      </ionic-item>
+    </ionic-card-content>
+  </ionic-card>
+
+  <ion-button expand='full' (click)="getWeatherData()">Submit</ion-button>
+
+  <ion-card-content>
+    <div *ngIf="data$ | async as dt">
+      <ion-card *ngFor = 'let t of dt.data'>
+        <ion-card-content>
+          datetime: {{t.datetime}}
+          temperature: {{t.temp2m}}
+          weather: {{t.weather}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-card-content>
+</ion-content>

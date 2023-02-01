@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card>
+      <ion-card-title>
+        <h1>Top 10 Longest Running Anime in Each Genre</h1>
+      </ion-card-title>
+    </ion-card>
+      <ion-item>
+        <ion-label>Your Favorite Genre</ion-label>
+        <ion-input [(ngModel)]="inputGenre$"></ion-input>
+      </ion-item>
+    <ion-button expand='full' (click)="getLongest()">Submit</ion-button>
+    <div *ngIf="genre$$ | async as dg$">
+    <ion-card-content *ngFor = 'let g$ of dg$.data'>
+      Anime Name: {{g$.name}}
+      Episodes: {{g$.episodes}}
+    </ion-card-content>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-card>
+      <ion-card-title>
+        <h1>Top 10 Best Rated Anime By Your Favorite Genre</h1>
+      </ion-card-title>
+    </ion-card>
+      <ion-item>
+        <ion-label>Your Favorite Genre</ion-label>
+        <ion-input [(ngModel)]="inputGenre"></ion-input>
+      </ion-item>
+    <ion-button expand='full' (click)="getTop10()">Submit</ion-button>
+    <div *ngIf="genre$ | async as dg">
+    <ion-card-content *ngFor = 'let g of dg.data'>
+      Anime Name: {{g.name}}
+      Rating: {{g.rating}}
+    </ion-card-content>
+    </div>
+  </ion-card>
+
+</ion-content>
