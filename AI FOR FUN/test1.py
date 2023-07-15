@@ -15,22 +15,21 @@ def speak(audioString):
     print(audioString)
     tts = gTTS(text=audioString, lang='th')
     tts.save("audio.mp3")
-    os.system("mpg123 -q audio.mp3")
- 
+    os.system("afplay audio.mp3")
+
 def recordAudio():
 # Record Audio
     r = sr.Recognizer()
+
     with sr.Microphone() as source:
-        print("Say something!")
-        audio = r.listen(source)
- 
-    # Speech recognition using Google Speech Recognition
+        r.adjust_for_ambient_noise(source=source)
+        audio = r.listen(source,timeout=3)
+        
     data = ""
     try:
     # Uses the default API key
     # To use another API key: `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
         data = r.recognize_google(audio,language="th")
-
         print("You said: " + data)
     except sr.UnknownValueError:
         print("Google Speech Recognition could not understand audio")
