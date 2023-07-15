@@ -12,7 +12,24 @@ def speak(audioString):
 
 def recordAudio():
 # Record Audio
-    r=sr.Recognizer()
+    r = sr.Recognizer()
+
+    with sr.Microphone() as source:
+        r.adjust_for_ambient_noise(source=source)
+        audio = r.listen(source,timeout=3)
+
+        data = ''
+        try :
+            data = r.recognize_google(audio)
+            print(data)
+
+        except sr.UnknownValueError:
+            print(" Error")
+
+        except sr.RequestError as e:
+            print("Request Error")
+            
+    """r=sr.Recognizer()
     print(sr.Microphone.list_microphone_names())
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source,duration=1)
@@ -23,7 +40,7 @@ def recordAudio():
             text = r.recognize_google(audio)
             print(text)
         except:
-            print("sorry, could not recognise")
+            print("sorry, could not recognise")"""
     
     """r = sr.Recognizer()
     with sr.Microphone() as source:
