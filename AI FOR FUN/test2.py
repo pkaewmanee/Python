@@ -17,7 +17,7 @@ def recordAudio():
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source=source)
         audio = r.listen(source,timeout=3)
-        
+
     data = ""
     try:
     # Uses the default API key
@@ -32,7 +32,7 @@ def recordAudio():
     return data
  
 def dekdoydev(data):
-    if "เด็กดอย" in data:
+    if "บัง" in data:
         speak("ว่าไงคะ")
 
     if "สบายดีไหม" in data:
