@@ -17,37 +17,7 @@ def recordAudio():
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source=source)
         audio = r.listen(source,timeout=3)
-
-        data = ''
-        try :
-            data = r.recognize_google(audio)
-            print(data)
-
-        except sr.UnknownValueError:
-            print(" Error")
-
-        except sr.RequestError as e:
-            print("Request Error")
-            
-    """r=sr.Recognizer()
-    print(sr.Microphone.list_microphone_names())
-    with sr.Microphone() as source:
-        r.adjust_for_ambient_noise(source,duration=1)
-        # r.energy_threshold()
-        print("say anything : ")
-        audio= r.listen(source)
-        try:
-            text = r.recognize_google(audio)
-            print(text)
-        except:
-            print("sorry, could not recognise")"""
-    
-    """r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Say something!")
-        audio = r.listen(source)"""
- 
-    # Speech recognition using Google Speech Recognition
+        
     data = ""
     try:
     # Uses the default API key
